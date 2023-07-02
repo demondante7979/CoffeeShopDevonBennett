@@ -1,0 +1,497 @@
+<!-- Devon Bennett, Julie Hess, Jessica Ariza, Carlos Ruiz -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+        <!-- Addition CSS must be placed after Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <title>Devon Bennett Coffee shop workshop week 4</title>
+    </head>
+<!-- images/ modal menu/ card/main content-->
+    <body>
+        <header class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                        <img src="images/coffeesign.jpg" width="300px" class="img-fluid" />
+                    </div>
+                        <div class="col">
+                            <h1>Cozy Coffee</h1>
+                            <h2>café&Bakery</h2>
+                        </div>
+                        <div class="col-x1-2 col-md-2 mt-4">
+                            <a role="button" class="btn btn-lg btn-info" data-bs-toggle="modal" data-bs-target="#reserveTable" da>Reserve Table</a>
+                        </div>
+                        <div class="col-x1-2 col-md-2 mt-4">
+                            <a role="button" class="btn btn-lg btn-info" data-bs-toggle="modal" data-bs-target="#orderOnline" da>Order Online</a>
+                        </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Modal -->
+        <div class="modal fade" id="reserveTable">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Reserve Table</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row mb-3">
+                                <label class="col-form-label col-sm-6" for="People">People</label>
+                                <div class="col">
+                                    <select class="form-control" id="People" name="People">
+                                        <option>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label class="col-form-label col-sm-6" for="Time">Time</label>
+                                <div class="col">
+                                    <select class="form-control" id="Time" name="Time">
+                                        <option>Time...</option>
+                                        <option value="5pm">5:00pm</option>
+                                        <option value="6pm">6:00pm</option>
+                                        <option value="7pm">7:00pm</option>
+                                        <option value="8pm">8:00pm</option>
+                                        <option value="9pm">9:00pm</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label class="col-form-label col-sm-6" for="date">Date</label>
+                                <div class="col">
+                                    <input type="date" class="form-control" id="date" name="date" placeholder="Select a date" />
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="orderOnline">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" id="modalHeader">
+                        <h3 class="modal-title">Order Online</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row mb-3">
+                                <label class="col-form-label col-sm-6" for="menu">Menu</label>
+                                <div class="col">
+                                    <select class="form-control" id="menu" name="menu">
+                                        <option>Order...</option>
+                                        <option value="black">Black</option>
+                                        <option value="latte">Latte</option>
+                                        <option value="cappuccino">Cappuccino</option>
+                                        <option value="americano">Americano</option>
+                                        <option value="espresso">Espresso</option>
+                                        <option value="macchiato">Macchiato</option>
+                                        <option value="motcha">Motcha</option>
+                                        <option value="flatwhite">Flat White</option>
+                                        <option value="Irish">Irish</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label class="col-form-label col-sm-6" for="side">Side</label>
+                                <div class="col">
+                                    <select class="form-control" id="side" name="side">
+                                        <option>Order...</option>
+                                        <option value="Cake1">Coffee Caramel Cake</option>
+                                        <option value="Cake2">Tiramisu</option>
+                                        <option value="Cake3">Red Velvet</option>
+                                        <option value="Cake3">Apple Loaf Cake</option>
+                                        <option value="cookie1">Chocolate Cookie</option>
+                                        <option value="cookie2">Sugar Cookie</option>
+                                        <option value="cookie3">Polvorón</option>
+                                        <option value="cookie4">Kurabiiki</option>
+                                        <option value="cookie5">Engelsaugen</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label class="col-form-label col-sm-6" for="pickUpOrDelivery">Pickup Or Delivery</label>
+                                <div class="col-2">
+                                    <div class="btn-group">
+                                        <input type="radio" class="btn-check" name="siteType" id="Pickup" value="Pickup" />
+                                        <label class="btn btn-primary" for="Pickup">Pickup</label>
+                                        <input type="radio" class="btn-check" name="siteType" id="delivery" value="delivery" />
+                                        <label class="btn btn-success" for="delivery">Delivery</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">Add to Order</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="images/coffeeheart.jpg" width="60" height="60" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#coffeeNavbar" >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="coffeeNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="#"><i class="fa fa-home fa-lg"></i> Homepage</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-info fa-lg"></i> Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-address-card fa-lg"></i> Contact Us</a></li>
+                    </ul>
+                    <span class="navbar-text ms-auto">
+                        <a role="button" data-bs-toggle="modal" data-bs-target="#CartModal">
+                            <i class="fa fa-sign-in"></i> Cart
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+        <div class="modal fade" id="CartModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Current items:Example</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <form>
+                                <div class="row">
+                                    <div class="row mb-3">
+                                        <label class="col-form-label col-sm-6" for="Item">Item</label>
+                                        <div class="col">
+                                            <select class="form-control" id="side" name="side">
+                                                <option>Your item</option>
+                                                <option value="item1">Your item</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="col-form-label col-sm-6" for="Item">Item</label>
+                                        <div class="col">
+                                            <select class="form-control" id="side" name="side">
+                                                <option>Your item</option>
+                                                <option value="item1">Your item</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="col-form-label col-sm-6" for="Item">Item</label>
+                                        <div class="col">
+                                            <select class="form-control" id="side" name="side">
+                                                <option>Your item</option>
+                                                <option value="item1">Your item</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label">Pickup</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Delivery</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Order</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row row-content align-items-start review-section mb-4">
+                <div class="col-sm-4 col-md-4 order-sm-first">
+                    <h2 class="text-sm-first">Come In And Check Out Our New Iced Matcha Green Tea Latte</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.ut labore et dolore magna aliqua abore et.</p>
+                </div>
+                <div class="col ms-lg-4">
+                    <img class="img-thumbnail img-fluid" src="./images/matcha.jpg" width="300px" alt="picture motcha">
+                </div>
+                <div class="col">
+                    <h3>Hear What Guest Say About It</h3>
+                    <p>-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="row row-content align-self-center review-section mb-4">
+            <table class="col-sm-6 col-md-12">
+                <tr>
+                  <th>Drinks</th>
+                  <th class="text-center">Description</th>
+                  <th>Price</th>
+                </tr>
+                <tr id="coffee1">
+                  <td>Americano</td>
+                  <td class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</td>
+                  <td>$2.50</td>
+                </tr>
+                <tr id="coffee2">
+                  <td>Cappuccino</td>
+                  <td class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                  <td>$3.50</td>
+                </tr>
+                <tr id="coffee3">
+                  <td>Motcha</td>
+                  <td class="text-center">Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                  <td>$4.00</td>
+                </tr>
+                <tr id="coffee4">
+                    <td>Black</td>
+                    <td class="text-center">Lorem ipsum dolor sit amet, adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua.</td>
+                    <td>$3.00</td>
+                  </tr>
+                  <tr id="coffee5">
+                    <td>Latte</td>
+                    <td class="text-center">Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                    <td>$2.50</td>
+                  </tr>
+                  <tr id="coffee6">
+                    <td>Macchiato</td>
+                    <td class="text-center">Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod  incididunt tempor incididunt ut labore et dolore magna aliqua.</td>
+                    <td>$5.00</td>
+                  </tr>
+                  <tr id="coffee7">
+                    <td>Flat White</td>
+                    <td class="text-center">Lorem ipsum dolor sit amet, adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                    <td>$3.50</td>
+                  </tr>
+                  <tr id="coffee8">
+                    <td>Irish</td>
+                    <td class="text-center">Lorem ipsum dolor sit amet, adipiscing incididunt elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                    <td>$6.50</td>
+                  </tr>
+              </table>
+            </div>
+              <br>
+              <div class="row row-content align-self-center review-section mb-4">
+                <table class="col-sm-6 col-md-12">
+                    <tr>
+                      <th>Deserts</th>
+                      <th class="text-center">Description</th>
+                      <th>Price</th>
+                    </tr>
+                    <tr id="Desert1">
+                      <td>Coffee Caramel Cake</td>
+                      <td class="text-center">Lorem ipsum dolor sit amet,adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</td>
+                      <td>$2.50</td>
+                    </tr>
+                    <tr id="Desert2">
+                      <td>Red Velvet</td>
+                      <td class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempor incididunt ut labore et dolore magna aliqua.</td>
+                      <td>$3.50</td>
+                    </tr>
+                    <tr id="Desert3">
+                      <td>Apple Loaf Cake</td>
+                      <td class="text-center">Lorem ipsum dolor sit amet tempor, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                      <td>$3.00</td>
+                    </tr>
+                    <tr id="Desert4">
+                        <td>Chocolate Cookie</td>
+                        <td class="text-center">Lorem ipsum dolor sit amet, adipiscing elit, sed tempor do tempor incididunt ut labore et dolore magna aliqua.</td>
+                        <td>$4.00</td>
+                      </tr>
+                      <tr id="Desert5">
+                        <td>Sugar Cookie</td>
+                        <td class="text-center">Lorem ipsum dolor sit amet, adipiscing tempor elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                        <td>$4.50</td>
+                      </tr>
+                      <tr id="Desert6">
+                        <td>Polvorón</td>
+                        <td class="text-center">Lorem ipsum amet, adipiscing elit, sed do eiusmod  incididunt tempor incididunt ut labore et dolore magna aliqua.</td>
+                        <td>$2.00</td>
+                      </tr>
+                      <tr id="Desert7">
+                        <td>Kurabiiki</td>
+                        <td class="text-center">Lorem ipsum dolor sit amet, adipiscing elit, eiusmod tempor et dolore magna aliqua.</td>
+                        <td>$5.50</td>
+                      </tr>
+                      <tr id="Desert8">
+                        <td>Engelsaugen</td>
+                        <td class="text-center">Lorem ipsum dolor sit amet, adipiscing , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                        <td>$2.50</td>
+                      </tr>
+                  </table>
+                </div>
+            <div class="container">
+                <h1 class="text-center">Instagram</h1>
+                <div class="row row-content">
+                    <div class="col-md-8 mx-auto">
+                        <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
+                                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
+                                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="images/kittenCoffee.jpg" alt="coffee with foam that looks like kittens" />
+                                    <div class="carousel-caption">
+                                        <h3>Try Our new Kitten Coffee</h3>
+                                        <p class="d-none d-sm-block">Our new artist has been hard at work learning how to create this amazing foam designed like little kittens!</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="images/coffeeheart.jpg" alt="Coffee with a heart in the center" />
+                                    <div class="carousel-caption">
+                                        <h3>Cozy Coffee's Signature</h3>
+                                        <p class="d-none d-sm-block">Try our Signature specail always made with love!</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="images/sideandCoffee.jpg" alt="Coffee with a side" />
+                                    <div class="carousel-caption">
+                                        <h3>Our Coffee served with a Side</h3>
+                                        <p class="d-none d-sm-block">Remember to try some of our Desert sides!</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="images/coffeebeans.jpg" alt="Chrome River Campground" />
+                                    <div class="carousel-caption">
+                                        <h3>Take Home Some Beans</h3>
+                                        <p class="d-none d-sm-block">If you enjoy our Coffee remember you can now take our beans home!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    <!-- footer links/ socials/ and ways to contact coffeeshop-->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row justify-content-lg-between">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <h1 class="text-center">Cozy Coffee Cafe&Bakery</h1>
+                    <p class="text-center">
+                        Rorem ipsum dolorconsectetur adipisicing elit, sed do eiusmod tempor incididunt. Ut enim ad veritatis et.orem ipsum dolorconsectetur adipisicing elit, tempor incididunt aneye.
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <h3 class="text-center">Contact us</h3>
+                    <br>
+                    <ul>
+                        <li><strong>Adress:</strong> 3366 Some Random Address</li>
+                        <br>
+                        <li><strong>Mail:</strong> CozyCoffee@gmail.com</li>
+                        <br>
+                        <li><strong>Phone:</strong> 1-444-443-4121</li>
+                        <br>
+                        <li><strong>Fax id:</strong>1 111 2222 22222</li>
+                    </ul>
+                </div>
+      
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <h3 class="text-center">Opening Hours</h3>
+                    <ul>
+                        <li>
+                        Monday
+                        <span>9:00AM - 10:00PM</span>
+                        </li>
+                        <li>
+                        tuesday
+                        <span>9:00AM - 10:00PM</span>
+                        </li>
+                        <li>
+                        wednestday
+                        <span>9:00AM - 10:00PM</span>
+                        </li>
+                        <li>
+                        Thusday
+                        <span>9:00AM - 10:00PM</span>
+                        </li>
+                        <li>
+                        Friday
+                        <span>8:00AM - 9:00PM</span>
+                        </li>
+                        <li>
+                        saterday
+                        <span>8:00AM - 8:00PM</span>
+                        </li>
+                        <li>
+                        Sunday
+                        <span>closed</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <div class="row align-items-start">
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+
+        </footer>           
+    </body>
+
+             <!--jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+             <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+             <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+             <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</html>

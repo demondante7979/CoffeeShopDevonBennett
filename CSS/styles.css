@@ -1,0 +1,66 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('/images/Coffeeshopbackground.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: rgb(0, 0, 0);
+ }
+    
+h1, h2, h3 {
+  font-family: "Lobster", cursive;
+ }
+
+header {
+  padding: 10px;
+  background-image: linear-gradient(to right, #811310, #8b261e, #b89f16);
+  color: rgb(37, 35, 35); 
+}  
+
+#CartModal .modal-header {
+    background-image: linear-gradient(to right, #811310, #8b261e, #b89f16);
+    color: rgb(250, 248, 248); }
+
+#reserveTable .modal-header {
+  background-image: linear-gradient(to right, #811310, #8b261e, #b89f16);
+  color: rgb(223, 215, 215); 
+}
+    
+#orderOnline .modal-header {
+  background-image: linear-gradient(to right, #811310, #8b261e, #b89f16);
+  color: rgb(223, 215, 215); 
+}
+
+
+.container {
+    background-color: rgba(0, 0, 0, 0.877);
+    padding: 30px;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+  }
+.navbar {
+  background-color: #000000f5; 
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.699); 
+}
+  
+.carousel {
+ border: solid #cc4f1e; 
+}
+  
+  #carouselButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100; 
+}
+
+footer {
+  background-image: linear-gradient(to right, #811310, #8b261e, #b89f16);
+  padding: 15px 0; 
+}
+    

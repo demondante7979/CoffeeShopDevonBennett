@@ -1,0 +1,21 @@
+
+.hero-image {
+      background-image: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/images/coffeecup.png");
+      height: 500px;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-attachment: fixed;
+      position: relative;
+      background-position: center;
+  }
+
+  body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(0, 0, 0);
+   }
